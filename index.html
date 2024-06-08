@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | News homepage</title>
+
+  <!-- linking scripts -->
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav id="mobile-popout">
+    <button id="close-menu" onclick="closeMenu()"></button>
+    <div id="mobile" class="links-container">
+      <a href="#" class="navbar">Home</a>
+      <a href="#" class="navbar">New</a>
+      <a href="#" class="navbar">Popular</a>
+      <a href="#" class="navbar">Trending</a>
+      <a href="#" class="navbar">Categories</a>
+    </div>
+  </nav>
+  <div id="parent">
+    <nav id="main-nav">
+      <button id="mobile-menu" onclick="openMenu()"></button>
+      <div id="desktop" class="links-container">
+        <a href="#" class="navbar">Home</a>
+        <a href="#" class="navbar">New</a>
+        <a href="#" class="navbar">Popular</a>
+        <a href="#" class="navbar">Trending</a>
+        <a href="#" class="navbar">Categories</a>
+      </div>
+    </nav>
+    <main>
+      <div id="top-section">
+        <section id="featured-article">
+          <picture> <!-- changing picture when the screen size changes -->
+            <source media="(min-width:578px)" srcset="./images/image-web-3-desktop.jpg">
+            <source media="(max-width: 849px)" srcset="./images/image-web-3-mobile.jpg">
+            <img src="./images/image-web-3-mobile.jpg" alt="An intro image">
+          </picture>
+          <article>
+            <h1>The Bright Future of Web 3.0?</h1>
+            <div id="text-content-and-button">
+              <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+              <button id="read-more">READ MORE</button>
+            </div>
+          </article>  
+        </section>
+
+        <aside id="new-articles">
+          <h2>New</h2>
+          <article id="new-article-1">
+            <h4>Hydrogen VS Electric Cars</h4>
+            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+          </article>
+          <hr>
+          <article id="new-article-2">
+            <h4>The Downsides of AI Artistry</h4>
+            <p>What are the possible adverse effects of on-demand AI image generation?</p>
+          </article>
+          <hr>
+          <article id="new-article-3">
+            <h4>Is VC Funding Drying Up?</h4>
+            <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+          </article>
+        </aside>
+      </div>
+
+      <section id="trending-articles">
+        <article id="trending-article-1">
+          <img src="images/image-retro-pcs.jpg" alt="An image of a retro pc">
+          <div class="text-container">
+            <h3>01</h3>
+            <h5>Reviving Retro PCs</h5>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </article>
+        <article id="trending-article-2">
+          <img src="images/image-top-laptops.jpg" alt="An image of a laptop keyboard">
+          <div class="text-container">
+            <h3>02</h3>
+            <h5>Top 10 Laptops of 2022</h5>
+            <p>Our best picks for various needs and budgets.</p>
+          </div>
+        </article>
+        <article id="trending-article-3">
+          <img src="images/image-gaming-growth.jpg" alt="An image of a gaming controller">
+          <div class="text-container">
+            <h3>03</h3>
+            <h5>The Growth of Gaming</h5>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

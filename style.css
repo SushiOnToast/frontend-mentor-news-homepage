@@ -1,0 +1,376 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background-color: hsl(36, 100%, 99%);
+    height: 100vh;
+    width: 100vw;
+}
+
+#parent {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.background {
+    animation-name: phase;
+    animation-duration: 1s;
+    filter:brightness(50%);
+    background-color: hsl(264, 100%, 96%);
+}
+
+@keyframes phase {
+    from {
+        filter: brightness(100%);
+        background-color: hsl(36, 100%, 99%);
+    }
+    to {
+        filter:brightness(50%);
+        background-color: hsl(264, 100%, 96%);
+    }
+}
+
+p {
+    font-size: 15px;
+    color: hsl(236, 13%, 42%);
+}
+
+#main-nav {
+    display: flex;
+    justify-content: flex-end;
+    background-image: url(images/logo.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 50px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+#mobile-menu,
+#close-menu {
+    width: 50px;
+    height: 50px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+#mobile-menu {
+    background-image: url(images/icon-menu.svg);
+}
+
+#close-menu {
+    align-self: flex-end;
+    background-image: url(images/icon-menu-close.svg);
+    background-size: 35px;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+#mobile-popout {
+    position: absolute;
+    height: 100vh;
+    width: 70%;
+    z-index: 1;
+    background-color: hsl(36, 100%, 99%);
+    right: 0%;
+    display: none;
+    flex-direction: column;
+    padding: 15px;
+    animation-name: slide;
+    animation-duration: 1s;
+}
+
+@keyframes slide {
+    from {width: 0%;}
+    to {width: 70%;}
+}
+
+.links-container {
+    display: flex;
+}
+
+#mobile {
+    margin-top: 75px;
+    margin-left: 15px;
+    flex-direction: column;
+    line-height: 45px;
+}
+
+#desktop {
+    display: none;
+}
+
+a {
+    color: hsl(240, 100%, 5%);
+    transition-duration: 0.2s;
+    text-decoration: none;
+}
+
+a:hover {
+    color: hsl(5, 85%, 63%);
+}
+
+#featured-article img {
+    width: 100%;
+
+}
+
+h1 {
+    font-size: 2.55rem;
+    font-weight: 800;
+    line-height: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#featured-article p {
+    font-weight: 400;
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+#read-more {
+    border: none;
+    background-color: hsl(5, 85%, 63%);
+    color: hsl(240, 100%, 5%);
+    width: 175px;
+    height: 45px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    transition-duration: 0.2s;
+}
+
+#read-more:hover {
+    background-color: hsl(240, 100%, 5%);
+    color: hsl(36, 100%, 99%);
+    cursor: pointer;
+}
+
+#text-content-and-button {
+    margin-bottom: 50px;
+}
+
+aside {
+    background-color: hsl(240, 100%, 5%);
+    margin-bottom: 50px;
+    padding: 25px 20px;
+}
+
+h2 {
+    color: hsl(35, 77%, 62%);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+h4 {
+    color: hsl(36, 100%, 99%);
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    transition-duration: 0.2s;
+}
+
+h4:hover {
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+
+aside p {
+    color: hsl(233, 8%, 79%);
+    line-height: 25px;
+    opacity: 0.8;
+}
+
+hr {
+    border: 1px solid hsl(233, 8%, 79%);
+    opacity: 0.4;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#trending-articles {
+    margin-bottom: 75px;
+}
+
+#trending-articles article {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#trending-articles img {
+    height: 130px;
+}
+
+.text-container {
+    margin-left: 25px;
+}
+
+h3 {
+    font-size: 1.9rem;
+    color: hsl(5, 85%, 63%);
+    margin-bottom: 10px;
+}
+
+h5 {
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: hsl(240, 100%, 5%);
+    transition-duration: 0.2s;
+}
+
+h5:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+}
+
+#trending-articles p {
+    font-size: 0.9rem;
+    line-height: 25px;
+}
+
+@media (min-width: 578px) {
+    #parent {
+        padding: 30px;
+    }
+}
+
+@media (min-width: 900px) {
+
+    #parent {
+        width: 100%;
+        padding: 0px 7.5%;
+        padding-bottom: 7.5%;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #top-section {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    #featured-article {
+        margin-right: 30px;
+        flex-basis: 70%;
+    }
+
+    aside {
+        padding: 20px 25px;
+        flex-basis: 30%
+    };
+
+    #featured-article article {
+        margin-top: 30px;
+        display: flex;
+    }
+
+    h1,
+    #text-content-and-button {
+        flex-basis: 50%;
+    }
+
+    h1 {
+        margin-right: 30px;
+        font-size: 3.25rem;
+        line-height: 60px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    #featured-article img {
+        width: 100%;
+    }
+
+    #text-content-and-button {
+        padding-right: 25px;
+    }
+
+    #featured-article p {
+        margin-bottom: 35px;
+    }
+
+    #trending-articles {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin: 0px;
+    }
+
+    #trending-articles article {
+        flex-basis: 30%;
+        margin: 0px;
+    }
+
+    #trending-articles img {
+        height: 140px;
+    }
+
+    #main-nav {
+        margin-bottom: 40px;
+        margin-top: 60px;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 2.25rem;
+    }
+
+    h4 {
+        font-size: 1.25rem;
+    }
+
+    h5 {
+        font-size: 1.1rem;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    /* changing the navbar */
+    #mobile-menu {
+        display: none;
+    }
+
+    #desktop {
+        display: flex;
+        width: 100%;
+        height: 75px;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    #desktop a {
+        margin-left: 40px;
+    }
+    
+    #main-nav {
+        background-size: 75px;
+    }
+}
+
